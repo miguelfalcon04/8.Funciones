@@ -52,4 +52,19 @@ public class Varias {
         return n;
     }
 
+    
+    /**
+     * Dada una base y un exponente devuelve la potencia.
+     * @param base
+     * @param exponente
+     * @return Potencia
+     */
+    public static int potencia(int base, int exponente){
+        int potencia = 1;
+        for (int i = 0; i < exponente; i++) {
+            potencia*=base;
+        }
+        return potencia;
+    }
+
 }
