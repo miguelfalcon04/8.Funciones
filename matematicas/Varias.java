@@ -97,4 +97,26 @@ public class Varias {
         return volteado;
     }
 
+    /**
+     *  Devuelve el dígito que está en la posición n de un número entero.
+        Se empieza contando por el 0 y de izquierda a derecha
+     * @param n
+     * @param posicion
+     * @return
+     */
+    public static int digitoN (int n, int posicion){
+        int volteado = voltea(n);
+        int digito = 0;
+
+        for (int i = 0; i <=posicion ; i++) {
+            if(i == posicion){
+                digito = volteado%10;
+            }else{
+                volteado/=10;
+            }
+        }
+
+        return digito;
+    }
+
 }
