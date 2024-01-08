@@ -67,4 +67,19 @@ public class Varias {
         return potencia;
     }
 
+    /**
+     * Cuenta el número de dígitos de un número entero.
+     * @param n
+     * @return Cantidad de dígitos en un número
+     */
+    public static int digitos(int n){
+        int cant = 0;
+        do {
+            n/=10;
+            cant++;
+        } while (n>0);
+
+        return cant;
+    }
+
 }
