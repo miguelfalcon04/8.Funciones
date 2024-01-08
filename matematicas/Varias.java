@@ -82,4 +82,19 @@ public class Varias {
         return cant;
     }
 
+    /**
+     * Le da la vuelta a un número.
+     * @param n
+     * @return numero volteado
+     */
+    public static int voltea(int n){
+        int volteado = 0;
+        do {
+            volteado = volteado*10 + n%10;
+            n/=10;
+        } while (n>0);
+
+        return volteado;
+    }
+
 }
