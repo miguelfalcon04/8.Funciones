@@ -228,5 +228,17 @@ public class Varias {
         return n;
     }
 
+    /**
+     *  Pega dos números para formar uno.
+     * @param n1
+     * @param n2
+     * @return Un solo numero
+     */
+    public static int juntaNumeros(int n1, int n2){
+        int numerosJuntos = pegaPorDetras(n1, n2);
+
+        return numerosJuntos;
+    }
+
 
 }
