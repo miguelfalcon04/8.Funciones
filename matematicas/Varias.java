@@ -212,5 +212,21 @@ public class Varias {
         return pegado;
     }
 
+    /**
+     * Toma como parámetros las posiciones inicial y final
+     * dentro de un número y devuelve el trozo correspondiente.
+     * @param n
+     * @param inicio
+     * @param fin
+     * @return trozo de número compuesto por todos los dígitos que van desde
+     *  la posición inicial a la posición final incluyendo ambos
+     */
+    public static int trozoDeNumero(int n, int inicio, int fin){
+        int longitud = digitos(n);
+        n = quitaPorDelante(n, inicio);
+        n = quitaPorDetras(n, longitud - fin);
+        return n;
+    }
+
 
 }
