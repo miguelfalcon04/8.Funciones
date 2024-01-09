@@ -148,5 +148,19 @@ public class Varias {
 
     }
 
+    /**
+     *  Le quita a un número(n) dígitos por detrás (por la
+     *  derecha).
+     * @param n
+     * @param digitos
+     * @return Numero con - digitos cifras
+     */
+    public static int quitaPorDetras(int n, int digitos){
+        for (int i = 0; i < digitos; i++) {
+            n/=10;
+        }
+        return n;
+    }
+
 
 }
