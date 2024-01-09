@@ -195,4 +195,22 @@ public class Varias {
         return pegado;
     }
 
+    /**
+     *  Añade un dígito a un número por delante.
+     * @param n
+     * @param numeroAnidar
+     * @return Numero definitivo
+     */
+    public static int pegaPorDelante(int n, int numeroAnidar){
+        int digitos = digitos(numeroAnidar);
+        int volteado = voltea(n);
+        for (int i = 0; i < digitos; i++) {
+            volteado*=10;
+        }
+        int pegado = volteado+numeroAnidar;
+        pegado = voltea(pegado);
+        return pegado;
+    }
+
+
 }
