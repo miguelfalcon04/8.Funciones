@@ -179,5 +179,20 @@ public class Varias {
         return num;
     }
 
+    /**
+     *  Añade un dígito a un número por detrás.
+     * @param n
+     * @param numeroAnidar
+     * @return Numero definitivo
+     */
+    public static int pegaPorDetras(int n, int numeroAnidar){
+        int digitos = digitos(numeroAnidar);
+        for (int i = 0; i < digitos; i++) {
+            n*=10;
+        }
+        int pegado = n+numeroAnidar;
+
+        return pegado;
+    }
 
 }
