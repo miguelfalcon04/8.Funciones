@@ -119,4 +119,34 @@ public class Varias {
         return digito;
     }
 
+    /**
+     *  Da la posición de la primera ocurrencia de un dígito
+        dentro de un número entero. Si no se encuentra, devuelve -1.
+     * @param n
+     * @param digito
+     * @return posición digito
+     */
+    public static int posicionDeDigito(int n, int digito){
+        int cont = 0;
+        int volteado = voltea(n);
+        boolean salir = false;
+
+        do {
+            if(volteado%10==digito){
+                salir = true;;
+            }else{
+                cont++;
+                volteado/=10;
+            }
+        } while (volteado>0 && salir == false);
+
+        if(salir == false){
+            return -1;
+        }else{
+            return cont;
+        }
+
+    }
+
+
 }
