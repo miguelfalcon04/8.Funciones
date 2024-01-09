@@ -162,5 +162,22 @@ public class Varias {
         return n;
     }
 
+    /**
+     *  Le quita a un número(n) dígitos por delante (por la
+     *  derecha).
+     * @param n
+     * @param digitos
+     * @return Numero con - digitos cifras
+     */
+    public static int quitaPorDelante(int n, int digitos){
+        int num = voltea(n);
+        for (int i = 0; i < digitos; i++) {
+            num/=10;
+        }
+        num = voltea(num);
+
+        return num;
+    }
+
 
 }
