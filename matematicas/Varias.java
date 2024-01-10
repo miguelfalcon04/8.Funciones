@@ -240,5 +240,31 @@ public class Varias {
         return numerosJuntos;
     }
 
+    /**
+     * Se le pasa un array y devuelve una lista con los primos que contiens
+     * @param array
+     * @return Lista de primos que se encuentran en un array
+     */
+    public static int[] filtraPrimos(int[] array){
+        int contPrimos = 0;
+        for (int i = 0; i < array.length; i++) {
+            if(Varias.esPrimo(array[i])){
+                contPrimos++;
+            }
+        }
+        
+        int[] primos = new int[contPrimos];
+        int cont = 0;
+        for (int i = 0; i < array.length; i++) {
+            if(Varias.esPrimo(array[i])){
+                primos[cont] = array[i];
+                cont++;
+            }
+        }
+
+        return primos;
+    }
+
+
 
 }
