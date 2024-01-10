@@ -265,6 +265,24 @@ public class Varias {
         return primos;
     }
 
+    /**
+     *  Se le pasa una cifra y un numero y busca si esta dentro de el o no
+     * @param n
+     * @param cifra
+     * @return True si el numero contiene la cifra, false si no
+     */
+    public static boolean buscaCifraEnNumero(int n, int cifra){
+        boolean estaNum = false;
+        int digitos = digitos(n);
+        for (int i = 0; i < digitos; i++) {
+            int cfr = n%10;
+            if(cfr==cifra){
+                estaNum = true;
+            }
+            n/=10;
+        }
 
+        return estaNum;
+    }
 
 }
