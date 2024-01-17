@@ -34,6 +34,26 @@ public class ArrayBi {
         return c;
     }
 
+    public static int[] coordenadasEnArrayBiInt(int[][] array, int n){
+        int[] pos = {-1,-1};
+        boolean fin = false;
 
+        for (int i = 0; i < array.length; i++) {
+            if(fin==true){
+                break;
+            }
+            for (int j = 0; j < array.length; j++) {
+                if(array[i][j]==n){
+                    pos[0] = i;
+                    pos[1] = j;
+                    fin = true;
+                }
+            }
+        }
+
+        return pos;
+    }
+
+    
 
 }
