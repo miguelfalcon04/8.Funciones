@@ -90,4 +90,26 @@ public class ArrayBi {
         int cont = 0;
         boolean captado = false;
 
+        if(posicion>n[0].length*n.length-1){
+            return -1;
+        }else{
+            for (int i = 0; i < n.length; i++) {
+                if(captado==true){
+                    break;
+                }
+                for (int j = 0; j < n[0].length; j++) {
+                    if(posicion==cont){
+                        num = n[i][j];
+                        captado = true;
+                        break;
+                    }else{
+                        cont++;
+                    }
+                }
+            }
+
+            return num;
+        }
+    }
+
 }
