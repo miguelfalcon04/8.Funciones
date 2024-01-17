@@ -54,6 +54,14 @@ public class ArrayBi {
         return pos;
     }
 
+    public static boolean esPuntoDeSilla(int x[][], int i, int j) {
     
+        int[] fila = filaDeArrayBiInt(x, i);
+        int[] columna = columnaDeArrayBiInt(x, j);
+        
+        return ((Array.minimoArrayInt(fila) == x[i][j])
+            && (Array.maximoArrayInt(columna) == x[i][j]));
+    }
+
 
 }
